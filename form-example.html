@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Enrollment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 40px auto; /* Added more margin for better spacing */
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Important for padding and width to work together */
+        }
+        .form-group input[type="checkbox"] {
+            width: auto; /* Checkboxes don't need full width */
+        }
+        .submit-button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(90, 47, 7);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .submit-button:hover {
+            background-color: rgb(120, 77, 37);
+        }
+/*java apply krnay k liye show form ka button lagana hota hy*/
+        /* Style for the button that will show the form */
+        .show-form-button {
+            display: block; /* ye form ko center m lanay k liye block krday ga*/
+            margin: 50px auto; /* Add space and center it */
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 0 10px 0 20px;
+            
+        }
+        .home{
+            font-weight: 400;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(221, 220, 217);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #left-aligned-btn {
+            position: absolute; /* Take it out of the normal flow */
+            right: 20px;       
+            top: 150px; 
+            padding: auto;
+            background-color: rgb(90, 68, 6);
+            color: rgb(248, 248, 248);
+        }
+    </style>
+</head>
+<body>
+    <li class="home"><a href="CSS 1st class.html">Home</a></li>
+    <button id="left-aligned-btn"  onclick="alert('For applying Click Enroll In A Course Button ! ')">Click Me</button>
+    <!--JAVA  Button to show the form --show form button k liye java k liye bnaya hy-->
+    <button id="showFormBtn" class="submit-button show-form-button">Enroll in a Course</button>
+    <!--JAVA clickon button ko right m lanay k liye id di hy  -->
+    <button id="right-aligned-btn" onclick="alert('Click Home Button for home page!')">Click Me</button>
+    <div class="form-container">
+        <h2>Enrollment Form</h2>
+        <!-- The <form> tag is the container for all your form inputs -->
+        <form action="/submit-your-form-handler" method="post">
+
+            <!-- Text Input with a Label -->
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+            </div>
+
+            <!-- Email Input -->
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                <input type="password" placeholder="Enter your password" id="password">
+                <button onclick="showPasswordLength()">check password</button>
+<p id="msg" style="color: red; font-weight: bold;"></p>
+            </div>
+
+            <!-- Select Dropdown -->
+            <div class="form-group">
+                <label for="course">Choose a Course:</label>
+                <select id="course" name="course">
+                    <option value="tajweed">Quran with Tajweed</option>
+                    <option value="arabic">Arabic Language</option>
+                    <option value="tafseer">Tafseer</option>
+                </select>
+            </div>
+
+            <!-- Textarea for comments -->
+            <div class="form-group">
+                <label for="comments">Comments or Questions:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Any questions?"></textarea>
+            </div>
+
+            <!-- Checkbox -->
+            <div class="form-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-button">Enroll Now</button>
+
+        </form>
+    </div>
+    <script>
+        // Wait for the document to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the button and the form container elements
+            const showFormBtn = document.getElementById('showFormBtn');
+            const formContainer = document.querySelector('.form-container');
+
+            // Hide the form container by default
+            formContainer.style.display = 'none';
+
+            // Add a click event listener to the button
+            showFormBtn.addEventListener('click', function() {
+                // When the button is clicked, show the form and hide the button
+                formContainer.style.display = 'block';
+                showFormBtn.style.display = 'none';
+            });
+        });
+        function showPasswordLength(){
+      let password = document.getElementById("password").value;
+      console.log(password.length);
+
+      let msg = document.getElementById("msg");
+      if(password.length >= 6){
+        msg.innerText = "Strong password";
+         //msg.innerText = "Strong password";
+         //msge.color = "green"  
+      } else {
+        msg.innerText="Weak password";
+        //msg.innerText = "Weak password";
+        //sg.style.color = "blue";
+      }
+   }
+
+    </script>
+
+</body>
+</html>
