@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 15px 0;
+    width: 100%;
+}
+
+.navbar1{
+    background-color:rgb(90, 47, 7); 
+    padding: 50px;
+    width: 100%;
+}
+.navbar1 ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.navbar1 ul li{
+    margin: 0 20px;
+    cursor:pointer;
+}
+.navbar1 ul li a{
+    color:rgb(231, 213, 124);
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bold;
+}
+.navbar1 ul li a:hover{
+    color: azure;
+    background-color: rgb(196, 172, 114);
+    padding: 5px 10px;;
+}
+</*----colours jo bar bar use hotay hain--apni marzi se jo name chahain rukh lain*/>
+    :root{
+        --primary-color: red;
+        --secondary-color: blue;
+        --text-color:black;
+        --highlight-color:yellow;
+    }
+    .p11{
+color:var(primary-color)
+    }
