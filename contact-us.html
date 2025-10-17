@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!--ye FONTAWSOME library ka link laganay se sary link ajaengay , jb "fa-solid"k sath lagaya jaega-->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        
+    
+   <title>contact us Al Wabil Academy</title>
+   
+    </header>
+        </head>
+        <body>
+
+            <nav class="navbar1">
+    <div class="logo1"><a href ="https://whatsapp.com/channel/0029VanzPf77Noa8Sv63ab19">Al Wabil Academy</a>
+        <h1 class="heading">CONTACT US VIA </h1>
+     </div>
+        <ul>
+    <li><a href="CSS 1st class.html"><i class="fa-solid fa-house"></i>Home</a></li>
+    <li><a href="https://wa.me/+923314904918"><i class="fa-solid fa-phone"></i>whatsapp</a></li>
+    <li><a href="form-example.html"><i class="fa-solid fa-user-plus"></i>Enrollment Form</a></li>
+    <li><a href="https://whatsapp.com/channel/0029VanzPf77Noa8Sv63ab19"><i class="fa-solid fa-mobile-screen-button"></i>Channel</a></li>
+    <li><a href="sumayyanaaz101@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a></li>
+    
+    <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+</ul>
+            
+            </div>
+        </nav>
+            <br>
+            <div class="container">
+                <div class="form-container">
+        <h2>Enrollment Form</h2>
+        <!-- The <form> tag is the container for all your form inputs -->
+        <form action="/submit-your-form-handler" method="post">
+
+            <!-- Text Input with a Label -->
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+            </div>
+
+            <!-- Email Input -->
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <!-- Select Dropdown -->
+            <div class="form-group">
+                <label for="course">Choose a Course:</label>
+                <select id="course" name="course">
+                    <option value="tajweed">Quran with Tajweed</option>
+                    <option value="arabic">Arabic Language</option>
+                    <option value="tafseer">Tafseer</option>
+                </select>
+            </div>
+
+            <!-- Textarea for comments -->
+            <div class="form-group">
+                <label for="comments">Comments or Questions:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Any questions?"></textarea>
+            </div>
+
+            <!-- Checkbox -->
+            <div class="form-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-button">Enroll Now</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
+
+<style>
+    .logo1 {
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        color: aliceblue;
+    }
+    .logo1 :hover{
+        color: white;
+    }
+    .navbar1{
+    background-color:rgb(167, 160, 154); 
+    padding: 50px;
+    width: 100%;
+    height: 100px;
+}
+
+.navbar1 ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.navbar1 ul li{
+    margin: 0 20px;
+    cursor:pointer;
+}
+.navbar1 ul li a{
+    color:rgb(252, 251, 250);
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bold;
+}
+.navbar1 ul li a:hover{
+    color: azure;
+    background-color: rgb(196, 172, 114);
+    padding: 5px 10px;
+}
+.heading4 {
+        background-color: rgb(165, 124, 231);
+        color: rgb(90, 47, 7);
+        border: 5px;
+        width: 100%auto;
+        height: 200px;}
+        .heading4 h1{
+        font-size: medium;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding-left: 15%;
+
+    }
+    .heading2 {
+        background-color: rgb(212, 206, 191);
+        color: rgb(90, 47, 7);
+        border: 5px;
+        width: 100%auto;
+        height: 175px;
+        font-size: x-large;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    
+    }
+/*--FORM STYLING START*/
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Important for padding and width to work together */
+        }
+        .form-group input[type="checkbox"] {
+            width: auto; /* Checkboxes don't need full width */
+        }
+        .submit-button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(90, 47, 7);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .submit-button:hover {
+            background-color: rgb(120, 77, 37);
+        }
+</style>
+            </div>
+        </body>
